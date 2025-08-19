@@ -1,0 +1,53 @@
+CREATE TABLE  bronze.crm_cust_info(
+cst_id INT PRIMARY KEY,
+cst_key NVARCHAR (50),
+cst_firstname NVARCHAR (50),
+cst_lastname NVARCHAR (50),
+cst_marital_status NVARCHAR (50),
+cst_gndr NVARCHAR (50),
+cst_create_date DATE
+);
+
+CREATE TABLE bronze.crm_prd_info(
+prd_id INT PRIMARY KEY,
+prd_key NVARCHAR (50),
+prd_nm NVARCHAR (50),
+prd_cost NVARCHAR (50),
+prd_line NVARCHAR (50),
+prd_start_dt DATETIME,
+prd_end_dt DATETIME
+);
+
+
+CREATE TABLE bronze.crm_sales_details(
+sls_id INT PRIMARY KEY,
+sls_ord_num NVARCHAR (50),
+sls_prd_key NVARCHAR (50),
+sls_cst_id INT,
+sls_ord_dt DATE,
+sls_ship_dt DATE,
+sls_due_dt DATE,
+sls_sales INT,
+sls_quantity INT,
+sls_price INT
+);
+
+CREATE TABLE bronze.erp_cust_az12(
+id INT PRIMARY KEY,
+cid NVARCHAR (50),
+bdate DATE,
+gen NVARCHAR (50)
+);
+
+CREATE TABLE bronze.erp_loc_a101(
+id INT PRIMARY KEY,
+cid NVARCHAR (50),
+cntry NVARCHAR (50)
+);
+
+CREATE TABLE bronze.erp_px_cat_g1v2(
+id NVARCHAR (50),
+cat NVARCHAR (50),
+subcat NVARCHAR (50),
+maintenance NVARCHAR (50)
+);
