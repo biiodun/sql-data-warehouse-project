@@ -1,0 +1,1 @@
+<content of scripts/bronze_schema_init.sql>
