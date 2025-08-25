@@ -1,7 +1,7 @@
 IF OBJECT_ID('bronze.crm_cust_info','U') IS NOT NULL 
     DROP TABLE bronze.crm_cust_info;
 CREATE TABLE  bronze.crm_cust_info(
-cst_id INT PRIMARY KEY,
+cst_id INT,
 cst_key NVARCHAR (50),
 cst_firstname NVARCHAR (50),
 cst_lastname NVARCHAR (50),
@@ -13,7 +13,7 @@ cst_create_date DATE
 IF OBJECT_ID('bronze.crm_prd_info','U') IS NOT NULL 
     DROP TABLE bronze.crm_prd_info;
 CREATE TABLE bronze.crm_prd_info(
-prd_id INT PRIMARY KEY,
+prd_id INT,
 prd_key NVARCHAR (50),
 prd_nm NVARCHAR (50),
 prd_cost NVARCHAR (50),
@@ -25,7 +25,7 @@ prd_end_dt DATETIME
 IF OBJECT_ID('bronze.crm_sales_details','U') IS NOT NULL 
     DROP TABLE bronze.crm_sales_details;
 CREATE TABLE bronze.crm_sales_details(
-sls_id INT PRIMARY KEY,
+sls_id INT,
 sls_ord_num NVARCHAR (50),
 sls_prd_key NVARCHAR (50),
 sls_cst_id INT,
@@ -40,7 +40,6 @@ sls_price INT
 IF OBJECT_ID('bronze.erp_cust_az12','U') IS NOT NULL 
     DROP TABLE bronze.erp_cust_az12;
 CREATE TABLE bronze.erp_cust_az12(
-id INT PRIMARY KEY,
 cid NVARCHAR (50),
 bdate DATE,
 gen NVARCHAR (50)
@@ -49,7 +48,6 @@ gen NVARCHAR (50)
 IF OBJECT_ID('bronze.erp_loc_a101','U') IS NOT NULL 
     DROP TABLE bronze.erp_loc_a101;
 CREATE TABLE bronze.erp_loc_a101(
-id INT PRIMARY KEY,
 cid NVARCHAR (50),
 cntry NVARCHAR (50)
 );
